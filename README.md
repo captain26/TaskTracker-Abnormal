@@ -75,9 +75,8 @@ Open the application in a browser: http://localhost:8080/tasks
 
 1) The application uses H2 In-Memory Database for simplicity and ease of setup, avoiding external database dependencies while still demonstrating JPA-based persistence.
 2) A simple server-rendered HTML interface (Thymeleaf) is used, allowing users to:
-   -> Add tasks with a title and description
-   -> Edit existing tasks
-   -> Mark tasks as completed
-   -> Delete tasks
-
-3) A controller handles all GET and POST mappings for task creation, retrieval, updating, completion, and deletion of Taks.
+   a) Add tasks with a title and description
+   b) Edit existing tasks
+   c) Mark tasks as completed
+   d) Delete tasks
+4) A controller handles all GET and POST mappings for task creation, retrieval, updating, completion, and deletion of Tasks.
