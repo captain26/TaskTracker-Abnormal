@@ -53,8 +53,6 @@ tasktracker
 │           │   └── edit-task.html
 │           └── application.properties
 └── pom.xml
-yaml
-Copy code
 
 ## Setup and Run Instructions
 
@@ -73,7 +71,7 @@ Open the application in a browser: http://localhost:8080/tasks
 
 ### AI tools (such as ChatGPT) were used to assist during development in the following ways:
 
-1) To generate the initial Spring Boot project boilerplate and basic application structure.
+1) To generate the initial Spring Boot project boilerplate.
 2) To help draft the HTML (Thymeleaf) templates for the user interface.
 3) As a reference for Spring Boot best practices and application structuring, since it had been some time since I last worked extensively with Spring Boot.
 
@@ -85,7 +83,7 @@ Open the application in a browser: http://localhost:8080/tasks
    
 ### DESIGN:
 
-1) The application uses H2 In-Memory Database for simplicity and ease of setup, avoiding external database dependencies while still demonstrating JPA-based persistence.
+1) The application uses an H2 In-Memory Database for simplicity and ease of setup
 2) A simple server-rendered HTML interface (Thymeleaf) is used, allowing users to:
    - Add tasks with a title and description
    - Edit existing tasks
