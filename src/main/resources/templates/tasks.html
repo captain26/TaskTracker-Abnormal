@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task Tracker</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .done { text-decoration: line-through; color: gray; }
+    </style>
+</head>
+<body>
+
+<h1>Task Tracker</h1>
+
+<form th:action="@{/tasks}" method="post">
+    <input type="text" name="title" placeholder="Task title" required>
+    <input type="text" name="description" placeholder="Description">
+    <button type="submit">Add Task</button>
+</form>
+
+<ul>
+    <li th:each="task : ${tasks}" style="display: flex; align-items: center; gap: 10px;">
+        <span>•</span>
+        <div>
+            <strong th:text="${task.title}"
+                    th:classappend="${task.completed} ? 'done'"></strong>
+            <br>
+            <span th:text="${task.description}"
+                  th:classappend="${task.completed} ? 'done'"></span>
+        </div>
+        <form th:action="@{/tasks/edit/{id}(id=${task.id})}" method="get" style="display:inline">
+            <button type="submit">Edit</button>
+        </form>
+        <form th:action="@{/tasks/toggle/{id}(id=${task.id})}" method="post" style="display:inline">
+            <button type="submit">✔</button>
+        </form>
+
+        <form th:action="@{/tasks/delete/{id}(id=${task.id})}" method="post" style="display:inline">
+            <button type="submit">✖</button>
+        </form>
+
+    </li>
+</ul>
+
+</body>
+</html>
