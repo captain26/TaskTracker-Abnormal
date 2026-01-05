@@ -32,17 +32,29 @@ The application allows users to **create, view, update, delete, and mark tasks a
 
 ## Project Structure
 
+```text
 tasktracker
-├── src/main/java/com/example/tasktracker
-│ ├── TaskTrackerApplication.java
-│ ├── controller/TaskController.java
-│ ├── model/Task.java
-│ └── repository/TaskRepository.java
-└── src/main/resources
-├── templates
-│ ├── tasks.html
-│ └── edit-task.html
-└── application.properties
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── example
+│       │           └── tasktracker
+│       │               ├── TaskTrackerApplication.java
+│       │               ├── controller
+│       │               │   └── TaskController.java
+│       │               ├── model
+│       │               │   └── Task.java
+│       │               └── repository
+│       │                   └── TaskRepository.java
+│       └── resources
+│           ├── templates
+│           │   ├── tasks.html
+│           │   └── edit-task.html
+│           └── application.properties
+└── pom.xml
+yaml
+Copy code
 
 ## Setup and Run Instructions
 
